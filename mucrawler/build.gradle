@@ -1,0 +1,32 @@
+// File: mucrawler/build.gradle
+// Author: Chad Hogg
+// Version: 2023-01-19
+// Purpose: This is a configuration file for Gradle, written in the Groovy language.
+//   It should describe how to build / test the mucrawler subproject.
+//   That subproject consists of a web crawling application.
+// I am very much a Gradle noob, so it may not be written in the best possible way.
+
+plugins {
+    // This subproject will be an application.
+    id 'application'
+}
+
+
+repositories {
+    // We will be able to find dependencies here.
+    mavenCentral()
+}
+
+dependencies {
+    // This subproject will be using the musearchtools library (another subproject).
+    implementation project(':musearchtools')
+    // This subproject will be using the jsoup library.
+    implementation 'org.jsoup:jsoup:1.15.3'
+    // The tests for this application will use JUnit 4.
+    testImplementation 'junit:junit:4.13.2'
+}
+
+application {
+    mainClass = 'edu.millersville.csci406.spring2023.CrawlerMain'
+}
+

@@ -1,0 +1,26 @@
+// File: musearchtools/build.gradle
+// Author: Chad Hogg
+// Version: 2023-01-19
+// Purpose: This is a configuration file for Gradle, written in the Groovy language.
+//   It should describe how to build / test the musearchtools subproject.
+//   That subproject consists of classes that will be used in more than one application.
+// I am very much a Gradle noob, so it may not be written in the best possible way.
+
+
+plugins {
+    // This subproject will be a library (jar file in which no class has a main method).
+    id 'java-library'
+}
+
+repositories {
+    // Where to find the dependencies.
+    mavenCentral()
+}
+
+dependencies {
+    // This subproject will be using the PostgreSQL JDBC library internally.
+    implementation 'org.postgresql:postgresql:42.5.1'
+    // The tests for this library will use JUnit 4.
+    testImplementation 'junit:junit:4.13.2'
+}
+

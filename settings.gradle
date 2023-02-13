@@ -1,0 +1,11 @@
+// File: settings.gradle
+// Author: Chad Hogg
+// Version: 2023-01-19
+// Purpose: This is a configuration file for Gradle, written in the Groovy language.
+//   It should describe the subprojects that are part of this larger project.
+// I am very much a Gradle noob, so it may not be written in the best possible way.
+
+rootProject.name = 'websearch-stage00-solution'
+
+include 'musearchtools'
+include 'mucrawler'
