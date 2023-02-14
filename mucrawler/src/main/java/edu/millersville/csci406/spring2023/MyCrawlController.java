@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
  * You should only ever have one instance of this, which will coordinate the
  * work of multiple threads.
  * 
- * @author Chad Hogg
+ * @author Chad Hogg 
  * @version 2023-01-19
  */
 public class MyCrawlController implements CrawlController {
