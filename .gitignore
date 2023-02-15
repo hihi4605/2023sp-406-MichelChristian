@@ -6,3 +6,4 @@ build
 
 # Ignore VSCode compilation directory
 */bin
+crawler.log

@@ -1,15 +1,18 @@
 package edu.millersville.csci406.spring2023;
 
 import java.io.BufferedInputStream;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Scanner;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+
+/**
+ * An implementation of URLReader. Takes a URL and returns a document from said URL. If a connection
+ * cannot be established to the URL null is returned.
+ */
 public class NetworkURLReader implements URLReader {
 
     @Override
@@ -23,6 +26,11 @@ public class NetworkURLReader implements URLReader {
         }
     }
 
+    /**
+     * @param url The url of the HTML file we want to establish connection to.
+     * @return A document made from the url, or null if the document is unreadable or a connection
+     * could not be established. 
+     */
     @Override
     public Document readHTMLFile(URL url) {
         try {
